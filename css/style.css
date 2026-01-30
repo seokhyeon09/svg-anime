@@ -21,12 +21,22 @@ svg{
     stroke-width: 2;
     fill:transparent;
 }
-.ellipse {
-    stroke: rgb(0, 255, 85);
-    stroke-dasharray: 1775;
+.svg-wrap {
+    position: relative;
+    /* 중앙 정렬을 위해 위치 조정 (부모 기준) */
+    width: 575px; 
+    height: 312px;
+    top: -10%;
+    left: -10%;
+}
+
+svg.ellipse {
+    width: 575px; /* viewBox 너비와 일치시켜야 궤도가 맞습니다 */
+    height: 312px;
     position: absolute;
-    left: 10%;
-    top: 10%;
+    top: 0;
+    left: 0;
+    fill: none;
 }
 
 .ico {
@@ -34,14 +44,16 @@ svg{
     height: 15px;
     background-color: rgb(0, 255, 85);
     position: absolute;
-    top: 10%;
-    left: 10%;
-    /* 아이콘의 정중앙이 선에 맞도록 보정 */
-    margin-left: 0px;
-    margin-top: -8px;
-    border-radius: 50%; 
+    top: 0;
+    left: 0;
+    
+    /* 아이콘 크기(15px)의 절반만큼 마이너스 마진을 주어 중심을 선에 맞춤 */
+    margin-left: -7.5px;
+    margin-top: -7.5px;
+    
+    border-radius: 50%;
     z-index: 10;
-    opacity: 0;
+    opacity: 0; /* 처음엔 숨김 */
 }
 svg.name {
     width: 1400px;
