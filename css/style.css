@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+    gap: 50px;
+    
+}
+svg{
+    width: 500px;
+    /* 테두리두께 */
+    stroke-width: 2;
+    fill:transparent;
+}
+.ellipse {
+    stroke: rgb(0, 255, 85);
+    stroke-dasharray: 1775;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+.ico {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 255, 85);
+    position: absolute;
+    /* 중요: 초기 위치를 0,0으로 고정 */
+    top: 10%;
+    left: 10%;
+    /* 아이콘의 정중앙이 선에 맞도록 보정 */
+    margin-top: -7.5px;
+    margin-left: -7.5px;
+    border-radius: 50%; /* 동그라미 형태가 경로 따라갈 때 자연스러움 */
+    z-index: 10;
+}
+svg.name {
+    width: 1400px;
+    z-index: 3;
+    
+}
+svg.name path{
+    stroke-width: 3;
+    stroke: #fff;
+
+}
+button.btn{
+    border: none;
+    /* 버튼의 배경색안보이게 */
+    background-color: transparent;
+    font-size: 30px;
+    color: #fff;
+    border-bottom: 10px solid #fff;
+    text-transform: uppercase;
+}
