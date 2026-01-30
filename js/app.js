@@ -48,7 +48,7 @@ anime({
     targets: '.ellipse path',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutSine',
-    duration: 10000,
+    duration: 2500,
     // loop: true,
     // direction: 'alternate'
 })
